@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-field{
+    @apply outline-primary  border-primary border-2 p-3 rounded-xl;
+}
+.inset{
+    border-radius: 26px;
+    background: #ffffff;
+    box-shadow: inset 5px 5px 10px #666666,
+                inset -5px -5px 10px #ffffff;
+}
