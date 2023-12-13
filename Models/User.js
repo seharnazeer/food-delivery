@@ -1,5 +1,5 @@
 import { timeStamp } from "console";
-import { Schema } from "mongoose";
+import { Schema,model,models } from "mongoose";
  const user=new Schema({
     email:{
         type:String,
@@ -16,3 +16,6 @@ import { Schema } from "mongoose";
         required:true
     }
  },{timeStamp:true})
+
+const User=models?.User || model("User",user)
+ export default  User
