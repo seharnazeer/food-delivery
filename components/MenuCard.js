@@ -1,10 +1,10 @@
 import React from "react";
-
+import Heading from "./heading"
 const MenuCard = ({ title }) => {
   return (
     <div className="flex justify-center flex-col items-center">
       <img src="/images/pot-salad.png" className="w-36 " />
-      <h2 className="text-5xl font-bold mb-6">{title}</h2>
+      <Heading  title={"Our Menu"} />
       <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 w-full gap-8 bg-[url(/images/bg.png)]">
         {[1, 2, 3, 4, 5, 6].map((elem) => (
           <div className="rounded-2xl hover:bg-white bg-slate-100 p-6 flex flex-col items-center justify-center">

@@ -14,9 +14,9 @@ const Header = () => {
       </Link>
       <div className="flex gap-8 text-lg items-center">
         <Link href={"/"}>Home</Link>
-        <Link href={""}>Menu</Link>
-        <Link href={""}>About</Link>
-        <Link href={""}>Contact</Link>
+        <Link href={"#menu"}>Menu</Link>
+        <Link href={"#about"}>About</Link>
+        <Link href={"#contact"}>Contact</Link>
       </div>
       <div className="flex gap-8 items-center">
         {status === "unauthenticated"?<Link href={"/login"}>

@@ -1,16 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+    scroll-behavior: smooth
+}
 .text-field{
     @apply outline-primary  border-primary border-2 p-3 rounded-xl;
 }
 .profile-field{
-    @apply outline-primary border-primary border-2 p-1 rounded-xl h-10
+    @apply outline-primary border-primary border-2 p-1 rounded-xl h-10 bg-slate-100
 }
 .inset{
     border-radius: 26px;
     background: #ffffff;
     box-shadow: inset 5px 5px 10px #666666,
                 inset -5px -5px 10px #ffffff;
+}
+input:disabled{
+    @apply opacity-75 border-gray-900 outline-gray-900
 }
