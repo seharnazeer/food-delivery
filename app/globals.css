@@ -8,7 +8,10 @@
     @apply outline-primary  border-primary border-2 p-3 rounded-xl;
 }
 .profile-field{
-    @apply outline-primary border-primary border-2 p-1 rounded-xl h-10 bg-slate-100
+    @apply outline-primary border-primary border-2 p-1 rounded-xl h-10 bg-slate-100 w-full
+}
+.icon{
+    @apply absolute right-4
 }
 .inset{
     border-radius: 26px;
