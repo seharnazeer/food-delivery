@@ -18,7 +18,10 @@ const HeroSection = () => {
 
         </div>
     </div>
-    <img src="/images/pizza.png" className='w-3/5 h-3/5' />
+    <img src="/images/hero.png" className='w-3/5 h-3/5' />
+    <div className='clip'>
+
+    </div>
     <div className='absolute right-0 left-0 z-0 bottom-0 '>
     <img src="/images/sallad1.png"  className='absolute left-0  bottom-0' />
     <img src="/images/sallad2.png" className='absolute right-0  bottom-0' />

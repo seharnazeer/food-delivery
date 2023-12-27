@@ -29,9 +29,9 @@ import bcrypt from "bcrypt"
           console.log(passwordOk)
           if(passwordOk){
             console.log("hey")
-            return user
+            return user;
           }else{
-            return null
+            return null;
           }
         }
       }),
@@ -41,6 +41,6 @@ import bcrypt from "bcrypt"
     })
   ]
 }
-
+export default authOptions;
 const handler= NextAuth(authOptions)
 export {handler as GET, handler as POST}

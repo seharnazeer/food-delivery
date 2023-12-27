@@ -11,7 +11,7 @@
     @apply outline-primary border-primary border-2 p-1 rounded-xl h-10 bg-slate-100 w-full
 }
 .icon{
-    @apply absolute right-4
+    @apply absolute right-4 bottom-2
 }
 .inset{
     border-radius: 26px;
@@ -21,4 +21,25 @@
 }
 input:disabled{
     @apply opacity-75 border-gray-900 outline-gray-900
+}
+label{
+    @apply font-thin
+}
+
+.menu{
+    @apply bg-slate-200 rounded-full p-2 pl-4 pr-4
+}
+.active{
+    @apply bg-primary text-white
+}
+li{
+    @apply flex justify-between gap-4 border-b-2 items-center
+}
+li input{
+    @apply w-24
+}
+
+.clip{
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    @apply bg-primary w-2/5 h-4/5 top-0 absolute right-0 -z-10
 }

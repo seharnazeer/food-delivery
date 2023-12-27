@@ -1,5 +1,6 @@
 "use client";
 import { signOut, useSession } from "next-auth/react";
+import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import React from "react";
 
@@ -12,23 +13,23 @@ const Header = () => {
       <Link href={""} className="text-xl font-extrabold text-primary">
         PIZZA SHOP
       </Link>
-      <div className="flex gap-8 text-lg items-center">
+      <div className="md:flex hidden gap-8 text-lg items-center ">
         <Link href={"/"}>Home</Link>
         <Link href={"#menu"}>Menu</Link>
         <Link href={"#about"}>About</Link>
         <Link href={"#contact"}>Contact</Link>
       </div>
-      <div className="flex gap-8 items-center">
+      <div className="flex md:gap-8 gap-2 items-center">
         {status === "unauthenticated"?<Link href={"/login"}>
           <button>Login</button>
         </Link>:<Link href={"/profile"}>Hello, {username}</Link>
         }
         {status === "unauthenticated" ? (
-          <button className="w-36 h-12 text-white rounded-full bg-primary">
+          <button className="md:w-36 p-2 h-12 text-white rounded-full bg-primary">
             <Link href={"/register"}>Register </Link>
           </button>
         ) : (
-          <button onClick={()=>signOut()} className="w-36 h-12 text-white rounded-full bg-primary">
+          <button onClick={()=>{signOut();redirect("/")}} className="md:w-36 p-2 h-12 text-white rounded-full bg-primary">
           SignOut
           </button>
         )}

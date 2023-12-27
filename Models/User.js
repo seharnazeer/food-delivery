@@ -1,6 +1,24 @@
 import { timeStamp } from "console";
 import { Schema,model,models } from "mongoose";
  const user=new Schema({
+    name:{
+        type:String
+    },
+    country:{
+        type:String
+    },
+    city:{
+        type:String
+    },
+    street:{
+        type:String
+    },
+    postal:{
+        type:String
+    },
+    phone:{
+        type:String
+    },
     email:{
         type:String,
         required:true,
@@ -14,6 +32,13 @@ import { Schema,model,models } from "mongoose";
     username:{
         type:String,
         required:true
+    },
+    image:{
+        type:String
+    },
+    admin:{
+        type:Boolean,
+        default:false
     }
  },{timeStamp:true})
 
