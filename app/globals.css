@@ -43,3 +43,9 @@ li input{
     clip-path: polygon(100% 0, 0 50%, 100% 100%);
     @apply bg-primary w-2/5 h-4/5 top-0 absolute right-0 -z-10
 }
+input[type=checkbox]{
+    @apply w-4 h-4 mr-2
+}
+.fly-parent button{
+    @apply p-2 text-white bg-primary rounded-3xl w-full
+}

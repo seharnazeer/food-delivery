@@ -10,12 +10,12 @@ const Header = () => {
   const username=session.data?.user?.name || session.data?.user?.email;
   return (
     <div className="flex justify-between items-center h-20 z-10 ">
-      <Link href={""} className="text-xl font-extrabold text-primary">
+      <Link href={"/"} className="text-xl font-extrabold text-primary">
         PIZZA SHOP
       </Link>
       <div className="md:flex hidden gap-8 text-lg items-center ">
         <Link href={"/"}>Home</Link>
-        <Link href={"#menu"}>Menu</Link>
+        <Link href={"/menuItems"}>Menu</Link>
         <Link href={"#about"}>About</Link>
         <Link href={"#contact"}>Contact</Link>
       </div>

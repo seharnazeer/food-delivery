@@ -60,7 +60,7 @@ const Page = () => {
     handleUpload(
       e,
       "avatar",
-      profile.image.includes("lh3.googleusercontent.com") ||
+      profile.image?.includes("lh3.googleusercontent.com") ||
         profile.image === undefined
         ? ""
         : profile.image
@@ -89,7 +89,7 @@ const Page = () => {
   
         <section className="flex gap-6">
           <div className="flex flex-col gap-6 items-center">
-            <img src={session.data?.user?.image} className="w-32 h-32 rounded-full" />
+            <img src={profile?.image} className="w-32 h-32 rounded-full" />
             <label>
               <input
                 className="hidden"

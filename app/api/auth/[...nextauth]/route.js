@@ -28,9 +28,10 @@ import bcrypt from "bcrypt"
           const passwordOk=user && bcrypt.compareSync(password,user.password);
           console.log(passwordOk)
           if(passwordOk){
-            console.log("hey")
+            console.log("hey",user)
             return user;
           }else{
+            console.log("null")
             return null;
           }
         }
@@ -39,7 +40,11 @@ import bcrypt from "bcrypt"
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
-  ]
+  ],
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60 // 30 days
+  }
 }
 export default authOptions;
 const handler= NextAuth(authOptions)

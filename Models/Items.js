@@ -15,6 +15,14 @@ import { Schema,model,models } from "mongoose";
             type:Number
         }
      }],
+     extraIngredients:[{
+      name:{
+          type:String
+      },
+      price:{
+          type:Number
+      }
+   }],
      image:{
         type:String
      },

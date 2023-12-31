@@ -21,7 +21,7 @@ const Menu = () => {
       console.log("message",data)
               setitems(data.message)
      })
-  },[])
+  },[display])
   if(display === true){
     return (<NewItem setdisplay={setdisplay} purpose={purpose} data={data} />)
   }else{
